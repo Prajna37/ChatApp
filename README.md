@@ -10,7 +10,7 @@ MERN
 ![App Screenshot](https://github.com/NupurItIs/BOL-The-Chatting-App---MERN/blob/main/images/Screenshot%202024-05-31%20at%205.56.22%20PM.png)
 
 ![App Screenshot](https://github.com/NupurItIs/BOL-The-Chatting-App---MERN/blob/main/images/Screenshot%202024-05-31%20at%205.56.31%20PM.png)
-![App Screenshot]((https://github.com/NupurItIs/BOL-The-Chatting-App---MERN/blob/main/images/Screenshot%202024-05-31%20at%206.01.09%20PM.png))
+![App Screenshot]((https://github.com/NupurItIs/BOL-The-Chatting-App---MERN/blob/main/images/Screenshot%202024-05-31%20at%206.01.09%20PM.png)
 
 
 ![App Screenshot](https://github.com/NupurItIs/BOL-The-Chatting-App---MERN/blob/main/images/Screenshot%202024-05-31%20at%206.01.29%20PM.png)
