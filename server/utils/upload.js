@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const USERNAME = process.env.DB_USERNAME;
-const PASSSWORD = process.env.DB_PASSWORD;
+const USERNAME = process.env.db_username;
+const PASSWORD = process.env.db_password;
 
 const storage = new GridFsStorage({
-    url:`mongodb+srv://${USERNAME}:${PASSSWORD}@cluster0.n72e496.mongodb.net/?retryWrites=true&w=majority`,
+    url:"mongodb+srv://<db_username>:<db_password>@cluster0.d2qhi.mongodb.net/",
 
     options: {useUnifiedTopology: true, useNewUrlParser: true},
     file: (request, file) =>{

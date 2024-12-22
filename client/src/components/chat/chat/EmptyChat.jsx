@@ -38,9 +38,9 @@ const EmptyChat = () => {
     <Component>
       <Container>
         <Image src={emptyChatImage} alt="image" />
-        <Title>WhatsApp Web</Title>
-        <SubTitle>Send and receive messages without keeping your phone online. <br /> </SubTitle>
-        <SubTitle>Use WhatsApp on up to 4 linked devices and 1 phone at the same time.</SubTitle>
+        <Title></Title>
+        <SubTitle>Connect and Use <br /> </SubTitle>
+        <SubTitle>Use this application to send and receive messages, files in real-time</SubTitle>
         <StyledDivider/>
       </Container>
     </Component>

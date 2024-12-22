@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, userContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { getUsers } from "../../../service/api";
 import { AccountContext } from "../../../context/AccountProvider";
@@ -25,19 +25,35 @@ const Conversations = ({text}) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await getUsers();
-      const filteredData = response.filter(user => user.name.toLowerCase().includes(text.toLowerCase()));
-      setUsers(filteredData);
-    };
-    fetchData();
-  }, [text]);
+      try {
+        let response = await getUsers();
 
-  useEffect(()=>{
-    socket.current.emit('addUsers', account);
-    socket.current.on('getUsers', users => {
-      setActiveUsers(users);
-    })
-  }, [account]);
+        // Check if response is valid before attempting to filter
+        if (Array.isArray(response)) {
+          const filteredData = response.filter(user =>
+            user.name.toLowerCase().includes(text.toLowerCase())
+          );
+          setUsers(filteredData);
+        } else {
+          console.error("Response is not an array:", response);
+        }
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+
+    fetchData(); // Call the fetchData function to load users
+
+  }, [text]); // Trigger useEffect when text changes
+
+  useEffect(() => {
+    if (socket.current && account) {
+      socket.current.emit('addUsers', account);
+      socket.current.on('getUsers', (users) => {
+        setActiveUsers(users);
+      });
+    }
+  }, [account, socket, setActiveUsers]);
 
   return (
     <Component>

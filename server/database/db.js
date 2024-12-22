@@ -1,21 +1,21 @@
-import mongoose, { mongo } from "mongoose";
-import dotenv from 'dotenv';
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
 dotenv.config();
 
-const USERNAME = process.env.DB_USERNAME;
-const PASSSWORD = process.env.DB_PASSWORD;
+const USERNAME = process.env.db_username;
+const PASSWORD = process.env.db_password;
 
-const Connection = async ()=>{
-    // mongodb+srv://${USERNAME}:${PASSSWORD}@clone-whatsapp.4qylnoh.mongodb.net/?retryWrites=true&w=majority`;
-    const URL = `mongodb+srv://${USERNAME}:${PASSSWORD}@cluster0.n72e496.mongodb.net/?retryWrites=true&w=majority`;
-    
+const Connection = async () => {
+    // Use template literals to insert the values from the environment variables
+    const URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.d2qhi.mongodb.net/`;
+
     try {
-        await mongoose.connect(URL, {useUnifiedTopology: true})
-        console.log('Database connected successfully');
+        await mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log("Database connected successfully");
     } catch (error) {
-        console.log('Error while connecting with databse', error.message);
+        console.log("Error while connecting with database:", error.message);
     }
-}
+};
 
 export default Connection;

@@ -68,9 +68,9 @@ const LoginDialog = () => {
     <Dialog open={true} PaperProps={{ sx: dialogstyle }} hideBackdrop={true}>
       <Component>
         <Container>
-          <Title>The BolApp is on your computer</Title>
+          <Title>The Applicatin is on your computer</Title>
           <StyledList>
-            <ListItem>1. Laptop pe khol aur bol</ListItem>
+            <ListItem>1. Open on Laptop And Start</ListItem>
             <ListItem>
               2. Login in to your Google account.
             </ListItem>
@@ -80,7 +80,7 @@ const LoginDialog = () => {
             <ListItem>
             </ListItem>
             <ListItem>
-                  <b>A project by Nupur, Tanish and Shlok</b>             </ListItem>
+                  <b>A project by Prajna,Pallavi,Pramitha and Saakshi</b>             </ListItem>
           </StyledList>
         </Container>
 
