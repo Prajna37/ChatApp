@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bol
 
 A real time messaging application that allows users to login with their google accounts to chat and share downloadable files and images.
@@ -80,3 +81,6 @@ Please adhere to this project's `code of conduct`.
 
 
 
+=======
+# ChatApp
+>>>>>>> f01efd40890ee88223f67a447b15e0da1ec31ecf
